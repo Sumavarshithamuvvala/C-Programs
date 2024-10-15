@@ -1,14 +1,27 @@
-#include <stdio.h>
 
+#include<stdio.h>
 int main()
 {
-    float fahrenheit, celsius;
-    printf("Enter temperature in Fahrenheit: ");
-    scanf("%f", &fahrenheit);
-    celsius = (fahrenheit - 32) * 5 / 9;
-    printf("Temperature in Celsius: %f\n", celsius);
+    int otp;
+    float temp;
+    printf("which conversion  ?\n1.farenheit to celsius\n2.celsius to farenheit\n");
+    scanf("%d",&otp);
+    printf("enter temprature :");
+    scanf("%f",&temp);
+    switch(otp)
+    {
+        case 1:printf("the temp in celsius is %f",((5*(temp-32))/9));
+        break;
+        case 2:printf("the temp in farenheit is %f",(((9*temp)/5)+32));
+        break;
+        
+    }
     
 }
-Output
-Enter temperature in Fahrenheit: 273
-Temperature in Celsius: 133.888885
+Output:
+which conversion  ?
+1.farenheit to celsius
+2.celsius to farenheit
+1
+enter temprature :273
+the temp in celsius is 133.888885
